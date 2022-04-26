@@ -6,7 +6,7 @@ namespace methods
     {
         static void Main(string[] args)
         {
-            // erişim_belirtici geri_donustipi metot_adş(parametreListesi/arguman)
+            // erişim_belirtici geri_donustipi metot_adi(parametreListesi/arguman)
             //{
             ////komutlar;
             // return;
@@ -23,11 +23,12 @@ namespace methods
             
             Metotlar ornek=new Metotlar();
             ornek.EkranaYazdir(Convert.ToString(sonuc)); //3. yol
-
+            
             int sonuc2 = ornek.ArttirVeTopla(ref a, ref b); //4. yol
             ornek.EkranaYazdir(Convert.ToString(sonuc2));
-            ornek.EkranaYazdir(Convert.ToString(a + b));
-
+            ornek.EkranaYazdir(Convert.ToString(a + b));    //referans ataması yapılmasaydı bunun sonucu 5 çıkardı
+                                                            //ama ref. atamasından sonra global olarak değerler
+                                                            //değişiyor ve bunun sonucu 7 oluyor.
 
         }
 
